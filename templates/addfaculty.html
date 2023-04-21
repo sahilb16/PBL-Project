@@ -1,0 +1,89 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>addfaculty
+        </title>
+        <meta content="width=device-width">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <main>
+            <div id="login" class="container-fluid text-center pt-5 ">
+                <div class="display-2 my-5">ADD FACULTY</div>
+            </div>
+            <div>
+                <form action="/hod/addfaculty" method="post" id="create-form">
+                    <div class="mb-3 mt-3 text-center d-flex justify-content-center">
+
+                        <label for="Login Id">Id :</label>
+                        <br />
+                        <input type="text" class="form-control ml-5" id="id" placeholder="Enter Id" name="id"
+                            style="width: 400px" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="center">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <label for="name" class="form-label">Name :</label>
+                            <br />
+                            <input type="text" class="form-control ml-5 " id="name" placeholder="Enter Name" name="name"
+                                style="width: 400px" required>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <label for="Qualification" class="form-label">Qualification :</label>
+                            <br />
+                            <input type="text" class="form-control ml-5 " id="qualification"
+                                placeholder="Enter Qualifications" name="qualification" style="width: 400px" required>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <label for="dob" class="form-label">Date Of Birth :</label>
+                            <br />
+                            <input type="date" class="form-control ml-5 " id="dob" placeholder="Enter 'YYYY'-'MM'-'DD'"
+                                name="dob" style="width: 400px" required>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <label for="contact" class="form-label">Contact Number :</label>
+                            <br />
+                            <input type="number" class="form-control ml-5 " id="contact"
+                                placeholder="Enter Contact Number" name="contact" style="width: 400px" required>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div>
+                            <label for="formFileLg" class="form-label">Certificate</label>
+
+                            <input type="file" name="certificate" accept=".pdf" required>
+
+                        </div>
+                    </div>
+                    <div class="center">
+                        {% if error %}
+                        <p>{{ error }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+        </main>
+    </body>
