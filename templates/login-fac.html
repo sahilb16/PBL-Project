@@ -22,14 +22,38 @@
 
         <main>
             <div id="login" class="container-fluid text-center pt-5 ">
-                <div class="display-2 my-5">FACULTY LOGIN</div>
+                <style>
+                    h1 {
+                      font-size: 60px;
+                    }
+                  </style>
+                  
+                <div class="display-2 my-5"><h1>FACULTY LOGIN</h1></div>
             </div>
             <div>
                 <form action="/login-fac" method="post" id="create-form">
                     <div class="mb-3 mt-3 text-center d-flex justify-content-center">
-
+                        <style>
+                            .label{
+                                padding: 100px;
+                            }
+                            </style>
+                            <style>
+                                label {
+                                  font-size: 20px;
+                                  font-family: Arial, sans-serif;
+                                  font-weight: bold;
+                                  font-style:simple;
+                                }
+                              </style>
+                              <style>
+  .large-label {
+    font-size: 20px;
+  }
+</style>
                         <label for="Login Id">Login Id :</label>
                         <br />
+                        
                         <input type="text" class="form-control ml-5" id="id" placeholder="Enter Login Id" name="id"
                             style="width: 400px" required>
                         <div class="valid-feedback">Valid.</div>
@@ -54,7 +78,14 @@
                         {% endif %}
                     </div>
                     <div class="center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <style>
+                            button {
+                              width: 150px;
+                              height: 45px;
+                              font-size: 20px;
+                            }
+                          </style>
+                        <button type="submit" class="btn btn-primary"><h3>Submit</h3></button>
                     </div>
                 </form>
 
