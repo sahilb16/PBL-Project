@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faculty Information</title>
+    <meta content="width=device-width">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Faculty Information</h1>
+    <div>
+        {% for faculty in faculties %}
+        <p>ID: {{ faculty.id }}</p>
+        <p>Name: {{ faculty.name }}</p>
+        <p>Qualification: {{ faculty.qualification }}</p>
+        <p>Date of Birth: {{ faculty.dob }}</p>
+        <p>Contact Number: {{ faculty.contact_number }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

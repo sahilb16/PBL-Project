@@ -1,0 +1,57 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>Portfolio Management</title>
+        <meta content="width=device-width">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <main>
+            <!-- <img id="bg" class="img-fluid" src="bg-img.jpg"> -->
+            <div id="login" class="container-fluid text-center pt-5">
+                <div class="display-2 my-5">FACULTY PORTFOLIO MANAGEMENT</div>
+            </div>
+            <div class="center">
+                <a href="{{url_for('loginhod')}}"><button class="btn btn-light my-4 mx-2">HOD
+                        Login</button></a>
+                <a href="{{url_for('loginfac')}}"><button class="btn btn-light text-dark my-4 mx-2">Faculty
+                        login</button></a>
+            </div>
+            <div style="padding-top: 100px;">
+                <footer class="container-fluid text-center pt-5 my-5" style=color:blanchedalmond>
+                    <h1>About us</h1>
+                    <h3>
+                        <p>We manage Portfolio</p>
+                        <p>Our Social links</p>
+                        <a href="">
+                            Linkedin
+                        </a>
+                        <a>
+                            Facebook
+                        </a>
+                    </h3>
+
+                </footer>
+            </div>
+        </main>
+
+    </body>
+
+    </html>
